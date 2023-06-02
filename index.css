@@ -1,5 +1,21 @@
+*, *:before, *::after {
+    box-sizing: border-box;
+}
 body {
     font-size: 16px;
+    /* background: #edeff2; */
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.5em 1em ;
+}
+.search-bar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 1em;
 }
 input {
     background: url("search.svg");
@@ -8,4 +24,34 @@ input {
     background-position: 95%;
     border-radius: 1em;
     /* border: 0; */
+}
+.filter-container {
+    position: absolute;
+    right: 2%;
+    top: 100%;
+    background: #fff;
+    box-shadow: 11px 18px 54px rgba(0, 0, 0, .11);
+    padding: 1em 1.5em;
+    border-radius: 6px;
+    clip-path: circle(0% at 100% 0%);
+    transition: clip-path .3s ease-in-out;
+}
+/* input , */
+label {
+    margin-left: 0.5em;
+}
+.menu-btn,
+input,
+label {
+    cursor: pointer;
+}
+.filter-option {
+    padding: 1em 3em 1em 0 ;
+
+}
+.checkbox-container {
+    margin-bottom: 1.5em;
+}
+.checkbox-container:last-of-type{
+    margin-bottom: 0;
 }
